@@ -1,7 +1,7 @@
 let mapleader = "\<Esc>"
 
 map <Leader><Esc> :NERDTreeToggle<CR>
-map <Leader>` :PlugUpdate<CR>
+map <Leader>` :call GitDiff()<CR>
 map <Leader>1 :set invpaste<CR>
 map <Leader>2 :set invnumber<CR>
 map <Leader>3 :call TrimWhiteSpace()<CR>
@@ -26,3 +26,10 @@ function! InverseLineNumbers()
   set invrelativenumber
   set invnumber
 endfunction
+
+function GitDiff()
+    :silent write
+    :silent execute '!git diff --color=always -- ' . expand('%:p') . ' | less --RAW-CONTROL-CHARS'
+    :redraw!
+endfunction
+
