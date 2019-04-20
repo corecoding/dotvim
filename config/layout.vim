@@ -14,19 +14,19 @@ highlight CursorLine term=bold cterm=bold ctermbg=233 guibg=Grey40
 "highlight CursorColumn term=bold cterm=bold ctermbg=233 guibg=Grey40
 
 " show line numbers
-"set number
+set number
 
 " show relative line numbers
-set number relativenumber
+"set number relativenumber
 
 " auto toggle relative line numbers
-augroup numbertoggle
-  autocmd!
-  "autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  "autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-  autocmd FocusGained,InsertLeave * set relativenumber
-  autocmd FocusLost,InsertEnter   * set norelativenumber
-augroup END
+"augroup numbertoggle
+"  autocmd!
+"  "autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"  "autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+"  autocmd FocusGained,InsertLeave * set relativenumber
+"  autocmd FocusLost,InsertEnter   * set norelativenumber
+"augroup END
 
 " indent use backspace delete indent, eol use backspace delete line at
 " begining start delete the char you just typed in if you do not use set
