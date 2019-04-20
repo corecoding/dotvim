@@ -94,7 +94,7 @@ set autowrite
 set nojoinspaces
 
 " start where we left off last in vim
-set viminfo='10,\"200,:20,%,n~/.viminfo
+set viminfo='10,\"200,:20,%,n~/.vim/viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 " put new windows below current one

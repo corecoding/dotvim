@@ -3,7 +3,7 @@ let mapleader = "\<Esc>"
 map <Leader><Esc> :NERDTreeToggle<CR>
 map <Leader>` :PlugUpdate<CR>
 map <Leader>1 :set invpaste<CR>
-map <Leader>2 :call InverseLineNumbers()<CR>
+map <Leader>2 :set invnumber<CR>
 map <Leader>3 :call TrimWhiteSpace()<CR>
 
 " bind Tab to switch window
