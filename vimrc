@@ -1,4 +1,4 @@
-" vim-plug
+" vim-plug initialization
 let plugPath = $HOME . "/.vim/bundle"
 call plug#begin(plugPath)
 
@@ -7,17 +7,18 @@ Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/LeaderF'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'ryanoasis/vim-devicons'
-
-" On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug "tpope/vim-surround"
 
-" Initialize plugin system
+" initialize plugin system
 call plug#end()
 
+" make sure backup directory exists
 if !isdirectory($HOME . "/.vim/backup")
     call mkdir($HOME . "/.vim/backup", "p", 0700)
 endif
 
+" make sure path for vim-plug exists
 if !isdirectory(plugPath)
     call mkdir(plugPath, "p", 0700)
     :PlugInstall
