@@ -1,5 +1,6 @@
 " vim-plug
-call plug#begin('~/.vim/bundle')
+let plugPath = $HOME . "/.vim/bundle"
+call plug#begin(plugPath)
 
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
@@ -17,9 +18,15 @@ if !isdirectory($HOME . "/.vim/backup")
     call mkdir($HOME . "/.vim/backup", "p", 0700)
 endif
 
-if !isdirectory($HOME . "/.vim/bundle")
-    call mkdir($HOME . "/.vim/bundle", "p", 0700)
+if !isdirectory(plugPath)
+    call mkdir(plugPath, "p", 0700)
     :PlugInstall
+endif
+
+" auto update plugins every 15 days
+if strftime('%s') - 1296000 > getftime(plugPath)
+    :PlugUpdate
+    call system('touch ' . plugPath)
 endif
 
 source ~/.vim/config/bindings.vim
