@@ -10,6 +10,10 @@ syntax on
 " enable line highlighting
 set cursorline
 highlight CursorLine term=bold cterm=bold ctermbg=233 guibg=Grey40
+
+"highlight CursorLineNr term=bold cterm=bold ctermfg=112 gui=bold
+highlight CursorLineNr term=bold cterm=bold ctermfg=003 ctermbg=233 guibg=Grey40
+
 " set cursorcolumn
 "highlight CursorColumn term=bold cterm=bold ctermbg=233 guibg=Grey40
 
