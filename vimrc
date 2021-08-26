@@ -5,10 +5,11 @@ call plug#begin(plugPath)
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/LeaderF'
-Plug 'vim-scripts/AutoComplPop'
+" Plug 'vim-scripts/AutoComplPop'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-surround'
+Plug 'ervandew/supertab'
 
 " initialize plugin system
 call plug#end()
