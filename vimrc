@@ -9,6 +9,7 @@ Plug 'vim-scripts/AutoComplPop'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-surround'
+Plug 'ervandew/supertab'
 
 " Use release branch (recommend)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
