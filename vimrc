@@ -4,11 +4,14 @@ call plug#begin(plugPath)
 
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
-Plug 'Yggdroot/LeaderF'
+"Plug 'Yggdroot/LeaderF'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-surround'
+
+" Use release branch (recommend)
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " initialize plugin system
 call plug#end()
@@ -26,6 +29,7 @@ endif
 
 " auto update plugins every 15 days
 if strftime('%s') - 1296000 > getftime(plugPath)
+    call system('git -C ' . $HOME . '/.oh-my-zsh/custom/themes/powerlevel10k pull')
     call system('touch ' . plugPath)
     call system('git -C ' . $HOME . '/.vim pull')
     :PlugUpdate
