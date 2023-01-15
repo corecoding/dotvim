@@ -36,6 +36,9 @@ if strftime('%s') - 1296000 > getftime(plugPath)
     :PlugUpdate
 endif
 
+" support utf-8 characters
+set encoding=utf8
+
 source ~/.vim/config/bindings.vim
 source ~/.vim/config/nerdtree.vim
 source ~/.vim/config/syntastic.vim

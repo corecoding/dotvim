@@ -7,9 +7,6 @@ set laststatus=2
 let did_load_csvfiletype=1
 filetype plugin on
 
-" support utf-8 characters
-set encoding=utf-8
-
 " reduce delay when leaving insert mode
 set ttimeoutlen=50
 
