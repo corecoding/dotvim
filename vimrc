@@ -29,12 +29,12 @@ if !isdirectory(plugPath)
 endif
 
 " auto update plugins every 15 days
-if strftime('%s') - 1296000 > getftime(plugPath)
-    call system('git -C ' . $HOME . '/.oh-my-zsh/custom/themes/powerlevel10k pull')
-    call system('touch ' . plugPath)
-    call system('git -C ' . $HOME . '/.vim pull')
-    :PlugUpdate
-endif
+"if strftime('%s') - 1296000 > getftime(plugPath)
+"    call system('git -C ' . $HOME . '/.oh-my-zsh/custom/themes/powerlevel10k pull')
+"    call system('touch ' . plugPath)
+"    call system('git -C ' . $HOME . '/.vim pull')
+"    :PlugUpdate
+"endif
 
 " support utf-8 characters
 set encoding=utf8
