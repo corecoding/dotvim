@@ -1,8 +1,8 @@
 " enable 256 colors
 set t_Co=256
 
-" required in ubuntu
-colorscheme default
+" required in ubuntu, broken on macOS Tahoe
+"colorscheme default
 
 " turn color highlighting on
 syntax on
